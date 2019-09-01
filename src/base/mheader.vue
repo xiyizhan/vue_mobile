@@ -10,7 +10,8 @@ export default {
     props: ['back'],
     data () {
     return {
-       
+
+
     }
   },
   methods:{
