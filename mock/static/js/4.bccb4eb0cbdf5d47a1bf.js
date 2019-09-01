@@ -1,0 +1,2 @@
+webpackJsonp([4],{ci6t:function(e,t){},wNb6:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var c={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n collect\n")])},staticRenderFns:[]};var r=n("VU/8")({name:"HelloWorld",data:function(){return{}}},c,!1,function(e){n("ci6t")},"data-v-9f1682dc",null);t.default=r.exports}});
+//# sourceMappingURL=4.bccb4eb0cbdf5d47a1bf.js.map
