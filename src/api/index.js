@@ -1,9 +1,23 @@
 import axios from 'axios'
-axios.defaults.baseURL='http://172.16.2.136:5002';
+axios.defaults.baseURL='http://172.20.10.2:5002';
 /*在这里统一拦截结果，把结果处理成res.data*/
 axios.interceptors.response.use((res)=>{
 	return res.data;
+});
+//在这里统一进行请求拦截，在header带token值
+axios.interceptors.request.use(config => {
+//     // 设置以 form 表单的形式提交参数，如果以 JSON 的形式提交表单，可忽略
+  // 下面会说在什么时候存储 token
+    config.headers['Authorization'] = 'small mi';
+    config.headers['Accept'] = 'application/json';
+    // config.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+    // store.dispatch('logined', localStorage.token)
+  return config
+},error =>{
+  alert("错误的传参", 'fail')
+  return Promise.reject(error)
 })
+
 //增加默认的请求路径
 //获取轮播图数据
 export let getSliders=()=>{
